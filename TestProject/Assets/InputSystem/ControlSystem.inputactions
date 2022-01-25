@@ -1,0 +1,102 @@
+{
+    "name": "ControlSystem",
+    "maps": [
+        {
+            "name": "TouchScreen",
+            "id": "2d4dc231-6f84-48e7-bc2d-88535ad9b31e",
+            "actions": [
+                {
+                    "name": "click",
+                    "type": "Button",
+                    "id": "8307d61f-522a-4c14-a5b1-2fab37627772",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "HoldDirection",
+                    "type": "PassThrough",
+                    "id": "ef5b9b3c-f6b4-4afa-9149-159c85f7ac87",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TouchPosition",
+                    "type": "PassThrough",
+                    "id": "b6a5ab1a-d35f-493f-bdef-84c1f20e9da5",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TouchPhase",
+                    "type": "PassThrough",
+                    "id": "7a07969c-265c-46c8-b985-7d549505aee4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8c2efcac-fc92-409a-9658-a1d4188ec947",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "TouchSystem",
+                    "action": "click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7cd0b2e3-2637-4e07-a516-eb8a57cf4ef0",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "Hold,Press",
+                    "processors": "",
+                    "groups": "TouchSystem",
+                    "action": "HoldDirection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2665f4e1-4fbf-47ef-a373-3503e9ed4c74",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TouchSystem",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91689d24-6382-483e-b8c1-d4cc7a5b1f39",
+                    "path": "<Touchscreen>/primaryTouch/phase",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TouchSystem",
+                    "action": "TouchPhase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "TouchSystem",
+            "bindingGroup": "TouchSystem",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
